@@ -4,7 +4,15 @@ const connectDB = require("./config/db");
 const { connect } = require("mongoose");
 const path = require("path");
 connectDB();
+const cors = require("cors");
 const PORT = process.env.PORT || 3000;
+
+//Cors
+const corsOptions = {
+  origin: process.env.ALLOWED_CLIENTS.split(","),
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.static("public"));
 app.use(express.json());
