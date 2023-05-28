@@ -9,7 +9,7 @@ const fileURLInput = document.querySelector("#fileURL");
 const sharingContainer = document.querySelector("sharing-container");
 const copyBtn = document.querySelector("copy-btn");
 
-const host = "https://innshare.herokuapp.com/";
+const host = "http://localhost:3000";
 const uploadURL = `${host}api/files`;
 
 dropZone.addEventListener("dragover", (e) => {
